@@ -1,0 +1,7 @@
+Votre prénom: {text-1653549827513}
+Votre nom: {text-1653550775428}
+Adresse e-mail: {Email}
+Votre téléphone: {text-1653549873241}
+Votre message: {textarea-1653549944613}
+Tijd: {TIME} 
+ : {YEAR}

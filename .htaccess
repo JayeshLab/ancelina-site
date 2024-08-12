@@ -1,0 +1,39 @@
+<IfModule mod_expires.c>
+ExpiresActive on
+ExpiresDefault "access plus 1 month"
+ExpiresByType text/html "access plus 0 seconds"
+ExpiresByType text/xml "access plus 0 seconds"
+ExpiresByType text/plain "access plus 0 seconds"
+ExpiresByType application/xml "access plus 0 seconds"
+ExpiresByType application/rss+xml "access plus 0 seconds"
+ExpiresByType application/json "access plus 0 seconds"
+ExpiresByType image/svg+xml "access plus 1 week"
+ExpiresByType text/css "access plus 1 week"
+ExpiresByType application/javascript "access plus 1 week"
+</IfModule> 
+
+<IfModule mod_headers.c>
+Header unset ETag
+Header unset Pragma
+Header unset Last-Modified
+Header append Vary Accept-Encoding
+Header append Cache-Control "public, no-transform, must-revalidate"
+Header set Last-modified "Sun, 31 Jan 2020 12:47:10 GMT"
+</IfModule>
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+
+
+
+#make for exampleboth www.allmedialab.nl and http://www.allmedialab.nl valid!
+#RewriteCond %{HTTP_HOST} !^www.voerstreek.be$ [NC]
+#RewriteRule ^(.*)$ http://www.voerstreek.be/$1 [L,R=301]
+
+
+
+#RewriteEngine On
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://www.voerstreek.be/$1 [R,L]

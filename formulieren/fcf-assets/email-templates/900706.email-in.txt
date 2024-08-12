@@ -1,0 +1,7 @@
+Naam: {text-1653549827513}
+Achternaam: {text-1653550775428}
+Email: {Email}
+Telefoon: {text-1653549873241}
+Bericht: {textarea-1653549944613}
+: {TIME} 
+ : {YEAR} 

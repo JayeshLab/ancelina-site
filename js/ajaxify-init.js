@@ -1,0 +1,1 @@
+let myAjaxify=new Ajaxify({elements:"#main-content, #header-stay, #footer-stay",verbosity:2,prefetchoff:!0,scrolltop:!0,pluginon:!0,requestDelay:0,intevents:!0,alwayshints:"pgia.js, menukit.js, fcf.just-validate.min.js, swiper-bundle.min.js, cleave.min.js, smooth-scroll.polyfills.min.js, lazysizes.js, functions.js, index.js"});_won("pronto.render",(function(){}));
