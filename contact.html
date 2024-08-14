@@ -513,6 +513,7 @@ Footer END -->
 		<script src="https://www.google.com/recaptcha/api.js?render=6LcMWRgqAAAAAApIo9HdFC-KylC84cP_MKbBT2Pi" defer></script>
 		<script src="/formulieren/fcf-assets/js/fcf.just-validate.min.js" defer></script>
 		<script>
+			console.log("-----------------------------------------------------------------------------");
 			console.log("CONTACT INLINE SCRIPT");
 			window.addEventListener("DOMContentLoaded", (event) => {
 				console.log("CONTACT window.DOMContentLoaded")
@@ -672,7 +673,7 @@ Footer END -->
 					.control
 					.zoom({position: 'topright'})
 					.addTo(map);
-			}, {once: true})
+			})
 		</script>
 	</body>
 </html>
