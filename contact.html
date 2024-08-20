@@ -509,15 +509,14 @@ Footer END -->
 		<script src="js/functions.js"></script>
 		<script src="js/dark-light-init.js"></script>
 		<!-- <script src="js/ajaxify-init.js"></script> -->
-		<script src="/formulieren/fcf-assets/js/lang/fcf.nl.js" defer></script>
-		<script src="https://www.google.com/recaptcha/api.js?render=6LcMWRgqAAAAAApIo9HdFC-KylC84cP_MKbBT2Pi" defer></script>
-		<script src="/formulieren/fcf-assets/js/fcf.just-validate.min.js" defer></script>
+		<script src="/formulieren/fcf-assets/js/lang/fcf.nl.js"></script>
+		<script src="https://www.google.com/recaptcha/api.js?render=6LcMWRgqAAAAAApIo9HdFC-KylC84cP_MKbBT2Pi"></script>
+		<script src="/formulieren/fcf-assets/js/fcf.just-validate.min.js"></script>
 		<script>
 			console.log("-----------------------------------------------------------------------------");
 			console.log("CONTACT INLINE SCRIPT");
-			window.addEventListener("DOMContentLoaded", (event) => {
-				console.log("CONTACT window.DOMContentLoaded")
-				//setTimeout(() => {
+			window.addEventListener('load', function () {
+				console.log("CONTACT window Loaded")
 				var optionsJV = {
 					rules: {
 						"text-1653549827513": {
