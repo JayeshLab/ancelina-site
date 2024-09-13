@@ -252,35 +252,37 @@ var e = {
   enableIsotope: function () {
     var t = e.select(".grid-item");
     if (e.isVariableDefined(t)) {
-      var n = e.select("[data-isotope]");
-      if (e.isVariableDefined(n))
-        e.selectAll("[data-isotope]").forEach((e) => {
-          var t = e.getAttribute("data-isotope"),
-            n = JSON.parse(t),
-            a = new Isotope(e, { itemSelector: ".grid-item", layoutMode: n.layoutMode });
-          imagesLoaded(e).on("progress", function () {
-            a.layout();
+      window.addEventListener("load", () => {
+        var n = e.select("[data-isotope]");
+        if (e.isVariableDefined(n))
+          e.selectAll("[data-isotope]").forEach((e) => {
+            var t = e.getAttribute("data-isotope"),
+              n = JSON.parse(t),
+              a = new Isotope(e, { itemSelector: ".grid-item", layoutMode: n.layoutMode });
+            imagesLoaded(e).on("progress", function () {
+              a.layout();
+            });
           });
-        });
-      var a = e.select(".grid-menu");
-      if (e.isVariableDefined(a))
-        e.selectAll(".grid-menu").forEach((t) => {
-          var n = t.getAttribute("data-target"),
-            a = t.dataset.target,
-            o = e.select(a).getAttribute("data-isotope"),
-            i = JSON.parse(o),
-            r = new Isotope(n, { itemSelector: ".grid-item", transitionDuration: "0.7s", layoutMode: i.layoutMode }),
-            s = t.querySelectorAll("li a");
-          s.forEach((e) => {
-            e.addEventListener("click", function (t) {
-              var n = e.getAttribute("data-filter");
-              r.arrange({ filter: n }), s.forEach((e) => e.removeClass("active")), e.addClass("active");
-            });
-          }),
-            imagesLoaded(n).on("progress", function () {
-              r.layout();
-            });
-        });
+        var a = e.select(".grid-menu");
+        if (e.isVariableDefined(a))
+          e.selectAll(".grid-menu").forEach((t) => {
+            var n = t.getAttribute("data-target"),
+              a = t.dataset.target,
+              o = e.select(a).getAttribute("data-isotope"),
+              i = JSON.parse(o),
+              r = new Isotope(n, { itemSelector: ".grid-item", transitionDuration: "0.7s", layoutMode: i.layoutMode }),
+              s = t.querySelectorAll("li a");
+            s.forEach((e) => {
+              e.addEventListener("click", function (t) {
+                var n = e.getAttribute("data-filter");
+                r.arrange({ filter: n }), s.forEach((e) => e.removeClass("active")), e.addClass("active");
+              });
+            }),
+              imagesLoaded(n).on("progress", function () {
+                r.layout();
+              });
+          });
+      });
     }
   },
   swiperSlider: function () {
